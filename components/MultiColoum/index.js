@@ -34,7 +34,6 @@ const DemoBar = ({ data }) => {
       showTitle: true,
       
       customContent: function customContent(title, items) {
-        console.log(title,items)
         var _field$data;
         var field = items === null || items === void 0 ? void 0 : items[0];
         var formatterInfo = {
@@ -51,7 +50,6 @@ const DemoBar = ({ data }) => {
           '</div><div class="g2-tooltip-items">',
         );
         items.forEach(function (item) {
-          console.log(item)
           htmlStr += '<div class="g2-tooltip-item" style="margin-bottom:8px;display:flex;">\n'
             .concat(`<span class="g2-tooltip-item-maker" style="background: ${item.color}; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px"> </span>\n`)
             .concat('<span class="g2-tooltip-item-label" style="margin-right: 12px;"> Rate of Return </span>\n') 

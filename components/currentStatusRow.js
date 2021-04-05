@@ -58,7 +58,7 @@ const renderCuCardContent = (props) => {
         <div>{title}</div>
         <div className="margin-left-sm">{titleInfo}</div>
       </div>
-      <div style={{ height: 50 || "auto", marginTop: "1rem" }}>{diagram}</div>
+      <div style={{ height: 50 || "auto", marginTop: "2rem" }}>{diagram}</div>
       <div style={{ marginTop: 5, paddingTop: 9 }}>
         <div
           style={{

@@ -3,8 +3,8 @@ import Pie from './Pie'
 import { useState, useEffect } from "react"
 
 const winnerPie = ({data}) => { 
-    const [queryType, setQueryType] = useState("all")
-    const [dataSource, setDataSource] = useState(data.all)
+    const [queryType, setQueryType] = useState("r100")
+    const [dataSource, setDataSource] = useState(data.r100)
     const handleChangeQuery = (e) => {
       setQueryType(e.target.value)
       switch (e.target.value){
@@ -25,19 +25,19 @@ const winnerPie = ({data}) => {
             style={{height: 600}}
             bodyStyle={{ padding: '20px 24px 8px 24px' }} 
             hoverable
-            title = {"Winner Distribution"}
+            title = {"Blocks Won Per Miner"}
             extra={
                 <div >
                   <div >
                     <Radio.Group value={queryType} onChange={handleChangeQuery} buttonStyle="solid">
-                      <Radio.Button value="all" className="radio-button">
-                        All
+                      <Radio.Button value="r100" className="radio-button">
+                        Recent 100
                       </Radio.Button>
                       <Radio.Button value="r1000" className="radio-button">
                         Recent 1000
                       </Radio.Button>
-                      <Radio.Button value="r100" className="radio-button">
-                        Recent 100
+                      <Radio.Button value="all" className="radio-button">
+                        All
                       </Radio.Button>
                     </Radio.Group>
                   </div>

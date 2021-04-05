@@ -9,9 +9,12 @@ import MinerTable from "../components/minerTable";
 import WinnerPie from "../components/winnerPie";
 import RR from "../components/RR";
 import BurnFeeArea from "../components/burnFeeArea";
+import PriceTag from "../components/PriceTag";
+//import { data } from "../utils/data"
 //import { data } from "../utils/data";
 
 const Home = (props) => {
+  console.log(props.data)
   return (
     <div>
       <Head>
@@ -22,8 +25,12 @@ const Home = (props) => {
         <Header
           style={{ position: "fixed", zIndex: 91, width: "100%", height: "5rem" }}
         >
-          <div className="logo">
-            <img src="/images/logo.png" className="logo_image"></img>
+          <div className="logo flex justify-between align-center" style={{ width: '100%' }}>
+            <div className="flex">
+              <img src="/images/logo.png" className="logo_image"/>
+              <p className="text-white" style={{lineHeight: '32px', marginLeft: '5px', marginBottom: '0'}}>stxmining.club </p>
+            </div>
+            <PriceTag price={props.data.price} />
           </div>
         </Header>
         <div className="header-bg"></div>
@@ -42,10 +49,10 @@ const Home = (props) => {
                 marginTop: 24,
               }}
             > 
-              <Col xl={13} lg={24} md={24} sm={24} xs={24}>
+              <Col xl={13} lg={13} md={24} sm={24} xs={24}>
                 <MinerTable data={props.data.minerTable} />
               </Col>
-              <Col xl={11} lg={24} md={24} sm={24} xs={24}>
+              <Col xl={11} lg={11} md={24} sm={24} xs={24}>
                 <WinnerPie data={props.data.winnerPie} />
               </Col>
             </Row>
@@ -75,6 +82,7 @@ const Home = (props) => {
 export async function getServerSideProps(context) {
   const res = await fetch(`http://47.242.239.96:8889/monitorIntegrate`);
   const data = await res.json();
+  console.log(data.price)
   return {
     props: { data },
   };

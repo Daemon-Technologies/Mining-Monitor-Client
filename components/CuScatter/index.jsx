@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Scatter from "@ant-design/charts/lib/scatter";
+import {thousands} from "../../utils/index.js"
 
 const CuScatter = ({ data }) => {
   var config = {
@@ -11,9 +12,11 @@ const CuScatter = ({ data }) => {
     size: 5,
     shape: "circle",
     yAxis: {
-      nice: true,
-      line: { style: { stroke: "#e1e9ef" } },
-      label:null
+      label:{
+        formatter: function(v){
+          return ''.concat(thousands(v), " Sats")
+        }
+      }
     },
     xAxis: {
       grid: { line: { style: { stroke: "#eee" } } },

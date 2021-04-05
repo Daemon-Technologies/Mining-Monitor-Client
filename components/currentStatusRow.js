@@ -22,7 +22,6 @@ const renderCardContent = (props) => {
     valueStyle = { fontSize: "0.6rem", color: "#374151" },
     prefix = "",
   } = props;
-  console.log(thousands(extraValue))
   return (
     <div>
       <div>
@@ -106,11 +105,11 @@ const currentStatusRow = ({ data }) => {
           style={{ height: "100%" }}
         >
           {renderCuCardContent({
-            title: "Average Burn Fee:",
-            titleInfo: data.current_burn_fee.avg,
+            title: "Average Spent per Block:",
+            titleInfo: thousands(data.current_burn_fee.avg) + ' Sats',
             diagram: <CuTinyLine data={data.current_burn_fee.data_20} />,
-            extraLabel: "Current Burn-Fee Amount",
-            extraValue: data.current_burn_fee.data_20[19],
+            extraLabel: "Total Spent by Miners",
+            extraValue: thousands(data.current_burn_fee.data_20[19]) + ' Sats',
           })}
         </Card>
       </Col>
@@ -125,7 +124,7 @@ const currentStatusRow = ({ data }) => {
             title: "Average Miner Amount:",
             titleInfo: data.current_miner.avg,
             diagram: <CuTinyLine data={data.current_miner.data_20} />,
-            extraLabel: "Current Miner Amount",
+            extraLabel: "Participating Miners",
             extraValue: data.current_miner.data_20[19],
           })}
         </Card>

@@ -10,7 +10,7 @@ const BurnFeeArea = ({data}) => {
             bodyStyle={{ padding: '20px 24px 8px 24px', marginTop: '20px' }} 
             style={{height: 600}}
             hoverable
-            title = {"Burn Fee Accumulation "}
+            title = {"Total Satoshis Spent Per Miner"}
         >   
             <MultiArea data={data.data}/>
         </Card>

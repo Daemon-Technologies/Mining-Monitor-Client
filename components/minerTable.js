@@ -2,6 +2,7 @@ import { Col, Row, Card, Table} from 'antd';
 import { Statistic } from 'antd';
 import MultiLine from './MultiLine'
 import SingleLine from './SingleLine'
+import { thousands } from "../utils/index.js"
 
 import CuScatter from "./CuScatter";
 const columns = [
@@ -28,6 +29,13 @@ const columns = [
 
 const minerTable = ({ data }) => {
   //            <MultiLine data={data.minersBurnFee20}/>
+    let datasource = data.table.map((value, index) => {
+      return {
+        ...value,
+        burn_fee: (thousands(value.burn_fee)),
+        stacks_block_height: (thousands(value.stacks_block_height)),
+      };
+    });
     return (
       <Card
         bordered={false}
@@ -45,7 +53,7 @@ const minerTable = ({ data }) => {
         <Table
           size="small"
           columns={columns}
-          dataSource={data.table}
+          dataSource={datasource}
           pagination={{ pageSize: 5 }}
           rowKey={(item) => item.stacks_block_height}
         />

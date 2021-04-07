@@ -1,29 +1,26 @@
 .header-bg {
-  background-color: #001528;
+  background-color: #050505;
   height: 22rem;
   position: relative;
 }
 .logo {
   border-bottom: 1px solid #374151;
-  background-color: #001528;
+  background-color: #050505;
   z-index: 99;
-  padding:1rem 0;
+  padding: 1rem 0;
 }
-
-
 
 .logo_image {
   width: 6rem;
   height: 2rem;
 }
 
-.text-white{
+.text-white {
   color: #fff;
 }
 
-
 .text-sm {
-  font-size: 0.6rem;
+  font-size: 14px;
 }
 
 .text-lg {
@@ -50,29 +47,32 @@
   flex-direction: column;
 }
 
-.justify-between{
+.justify-between {
   justify-content: space-between;
 }
 
-.align-center{
+.align-center {
   align-items: center;
 }
 
-.margin-left{
-  margin-left:1rem;
+.margin-left {
+  margin-left: 1rem;
 }
 
 .margin-left-sm {
   margin-left: 0.25rem;
 }
 
-.ant-table-cell,
-.ant-statistic-title {
+.ant-table-cell {
   font-size: 0.6rem;
   color: #6c7280;
 }
+.ant-statistic-title {
+  font-size: 14px;
+  color: #6c7280;
+}
 
-.ant-card{
+.ant-card {
   border-radius: 10px;
 }
 
@@ -80,18 +80,18 @@
   min-height: 65px;
 }
 
-.ant-card-body{
-  padding:0;
+.ant-card-body {
+  padding: 0;
 }
 
 /* .ant-card-head-title {
   padding: 6px 0;
 } */
-.price-tag{
-  background-color: #6c7280;
+.price-tag {
+  background-color: #1c1c1d;
   border-radius: 10rem;
   height: 2rem;
-  padding:0 1rem;
+  padding: 0 1rem;
 }
 
 .price-stx {
@@ -119,4 +119,15 @@
   height: 14px;
   margin-right: 4px;
   opacity: 0.5;
+}
+
+@font-face {
+  font-family: "Open Sauce";
+  src: url("/fonts/OpenSauceOne-Medium.ttf") format("truetype");
+}
+
+.site-text {
+  font-family: "Open Sauce";
+  font-size: 16px;
+  font-weight: 500;
 }

@@ -2,7 +2,7 @@ import { Col, Row, Card } from "antd";
 import { Statistic } from "antd";
 import MiniArea from "./MiniArea";
 import CuTinyLine from "./CuTinyLine";
-import {thousands} from '../utils/index.js'
+import { thousands } from "../utils/index.js";
 
 const topColResponsiveProps = {
   xs: 24,
@@ -25,13 +25,9 @@ const renderCardContent = (props) => {
   return (
     <div>
       <div>
-        <Statistic
-          title={title}
-          value={titleInfo}
-          valueStyle={valueStyle}
-        />
+        <Statistic title={title} value={titleInfo} valueStyle={valueStyle} />
       </div>
-      <div style={{ height: 50 || "auto" }}>{diagram}</div>
+      <div style={{ height: 60 }}>{diagram}</div>
       <div style={{ marginTop: 5, paddingTop: 9 }}>
         <div
           style={{
@@ -43,7 +39,9 @@ const renderCardContent = (props) => {
           className="flex flex-column"
         >
           <span className="text-sm text-grey">{extraLabel}</span>
-          <span className="text-bold text-black text-lg">{thousands(extraValue)}</span>
+          <span className="text-bold text-black text-lg">
+            {thousands(extraValue)}
+          </span>
         </div>
       </div>
     </div>
@@ -70,7 +68,9 @@ const renderCuCardContent = (props) => {
           className="flex flex-column"
         >
           <span className="text-sm text-grey">{extraLabel}</span>
-          <span className="text-bold text-black text-lg">{thousands(extraValue)}</span>
+          <span className="text-bold text-black text-lg">
+            {thousands(extraValue)}
+          </span>
         </div>
       </div>
     </div>
@@ -106,10 +106,10 @@ const currentStatusRow = ({ data }) => {
         >
           {renderCuCardContent({
             title: "Average Spent per Block:",
-            titleInfo: thousands(data.current_burn_fee.avg) + ' Sats',
+            titleInfo: thousands(data.current_burn_fee.avg) + " Sats",
             diagram: <CuTinyLine data={data.current_burn_fee.data_20} />,
             extraLabel: "Total Spent by Miners",
-            extraValue: thousands(data.current_burn_fee.data_20[19]) + ' Sats',
+            extraValue: thousands(data.current_burn_fee.data_20[19]) + " Sats",
           })}
         </Card>
       </Col>

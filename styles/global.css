@@ -90,16 +90,20 @@
 }
 
 .ant-card-head {
-  min-height: 65px;
+ display: flex;
+ align-items: center;
+}
+.ant-card-head-wrapper{
+  width: 100%;
 }
 
 .ant-card-body {
   padding: 0;
 }
 
-/* .ant-card-head-title {
-  padding: 6px 0;
-} */
+.ant-card-head-title {
+  font-size: 20px;
+}
 .price-tag {
   background-color: #1c1c1d;
   border-radius: 10rem;
@@ -183,6 +187,9 @@
 .ant-statistic-content-value {
   text-decoration: underline;
 }
+.ant-tooltip{
+  max-width: 20rem;
+}
 .notice-tooltip{
-  text-align: justify;
+ width: 20rem;
 }

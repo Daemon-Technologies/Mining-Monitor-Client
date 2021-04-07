@@ -18,7 +18,24 @@ const RR = ({ data }) => {
         break;
     }
   };
-  const notice = <div className="notice-tooltip">You can start editing the page by modifying pages/index.js. The page auto-updates as you edit the file.</div>;
+  const notice = 
+    <div className=" flex flex-column" >
+        <div>
+          The Rate of Return is computed as follow: 
+        </div>
+        <div>
+          RR = Total_Earn / Total_Cost - 1
+        </div>
+        <div>
+          Total_Earn = Block_Won * STX_Reward_Per_Block
+        </div>
+        <div>
+          Total_Cost = Total_Burnt + Total_BTC_Gas
+        </div>
+        <div>
+          Total_BTC_Gas = Commit_TX_Bytes(350) * Avg_Sats_Per_Byte(150) * Block_Mined
+        </div>
+    </div>;
   return (
     <Card
       bordered={false}

@@ -9,16 +9,6 @@ const CuTinyLine = ({ data }) => {
     autoFit: true,
     data,
     smooth: true,
-    // point: {
-    //   size: 2,
-    //   shape: 'circle',
-    //   style: {
-    //     fill: 'white',
-    //     stroke: '#5B8FF9',
-    //     lineWidth: 1,
-    //   },
-    // },
-    
     tooltip: {
       showTitle: true,
       showContent: true,

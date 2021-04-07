@@ -1,0 +1,22 @@
+[class*="cuIcon-"] {
+    font-family: "iconfont";
+    font-size: inherit;
+    font-style: normal;
+  }
+
+@font-face {
+  font-family: "iconfont"; /* project id 2470596 */
+  src: url("//at.alicdn.com/t/font_2470596_sx2ohke7ag.eot");
+  src: url("//at.alicdn.com/t/font_2470596_sx2ohke7ag.eot?#iefix")
+      format("embedded-opentype"),
+    url("//at.alicdn.com/t/font_2470596_sx2ohke7ag.woff2") format("woff2"),
+    url("//at.alicdn.com/t/font_2470596_sx2ohke7ag.woff") format("woff"),
+    url("//at.alicdn.com/t/font_2470596_sx2ohke7ag.ttf") format("truetype"),
+    url("//at.alicdn.com/t/font_2470596_sx2ohke7ag.svg#iconfont") format("svg");
+}
+
+
+
+.cuIcon-info:before {
+  content: "\e633";
+}

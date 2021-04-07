@@ -175,3 +175,7 @@
   border-radius: 0;
   border-width: 2px;
 }
+
+.ant-tooltip-inner {
+  color: #252525;
+}

@@ -26,20 +26,20 @@ export default function DashBoard({ dashboardData }) {
           zIndex: 91,
           width: "100%",
           height: "5rem",
-          backgroundColor: "#050505",
+          backgroundColor: "#243448",
         }}
       >
         <div
           className="logo flex justify-between align-center"
           style={{ width: "100%" }}
         >
-          <div className="flex">
+          <div className="flex align-center">
             <img src="/images/logo.svg" className="logo_image" />
             <p
               className="text-white site-text"
               style={{
                 lineHeight: "32px",
-                marginLeft: "5px",
+                marginLeft: "1.5rem",
                 marginBottom: "0",
               }}
             >

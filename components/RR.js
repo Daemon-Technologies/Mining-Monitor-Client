@@ -18,7 +18,7 @@ const RR = ({ data }) => {
         break;
     }
   };
-  const notice = "notice";
+  const notice = <div className="flex flex-column"><span>notice title</span><span>notice content</span></div>;
   return (
     <Card
       bordered={false}
@@ -30,7 +30,7 @@ const RR = ({ data }) => {
         <div className="flex align-center">
           <Tooltip title={notice} color="#fafafa">
             <div className="flex align-center margin-right text-grey ">
-              <span>info</span>
+              {/* <span>info</span> */}
               <span className="cuIcon-info margin-left-sm"></span>
             </div>
           </Tooltip>

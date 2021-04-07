@@ -19,13 +19,13 @@ const renderCardContent = (props) => {
     diagram,
     extraLabel,
     extraValue,
-    valueStyle = { fontSize: "0.6rem", color: "#374151" },
+    valueStyle = { fontSize: "0.9rem", color: "#374151",textDecoration:"underline" },
     prefix = "",
   } = props;
   return (
     <div>
       <div>
-        <Statistic title={title} value={titleInfo} valueStyle={valueStyle} />
+        <Statistic title={title} value={`#${titleInfo}`} valueStyle={valueStyle} />
       </div>
       <div style={{ height: 60 }}>{diagram}</div>
       <div style={{ marginTop: 5, paddingTop: 9 }}>

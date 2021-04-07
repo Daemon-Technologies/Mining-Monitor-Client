@@ -1,18 +1,18 @@
 .header-bg {
-  background-color: #050505;
+  background-color: #243448;
   height: 22rem;
   position: relative;
 }
 .logo {
   border-bottom: 1px solid #374151;
-  background-color: #050505;
+  background-color: #243448;
   z-index: 99;
-  padding: 1rem 0;
+  padding: 0.25rem 0;
 }
 
 .logo_image {
-  width: 6rem;
-  height: 2rem;
+  width: 9rem;
+  height: 3rem;
 }
 
 .text-white {
@@ -178,4 +178,8 @@
 
 .ant-tooltip-inner {
   color: #252525;
+}
+
+.ant-statistic-content-value {
+  text-decoration: underline;
 }

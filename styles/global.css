@@ -35,6 +35,14 @@
   font-weight: bold;
 }
 
+.text-w-500 {
+  font-weight: 500;
+}
+
+.text-w-400 {
+  font-weight: 400;
+}
+
 .text-black {
   color: #111827;
 }
@@ -59,6 +67,10 @@
   margin-left: 1rem;
 }
 
+.margin-right {
+  margin-right: 1rem;
+}
+
 .margin-left-sm {
   margin-left: 0.25rem;
 }
@@ -70,6 +82,7 @@
 .ant-statistic-title {
   font-size: 14px;
   color: #6c7280;
+  font-weight: 500;
 }
 
 .ant-card {
@@ -130,4 +143,35 @@
   font-family: "Open Sauce";
   font-size: 16px;
   font-weight: 500;
+}
+
+.tooltip-container {
+  padding: 0.5rem;
+}
+
+.tooltip-triangle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 7px 0 7px;
+  border-color: #007bff transparent transparent transparent;
+}
+
+.g2-tooltip {
+  margin-top: -4rem;
+}
+
+.table-row {
+  line-height: 1.5rem;
+}
+
+.ant-pagination-item-active {
+  border-width: 2px;
+}
+
+.ant-pagination-item {
+  border: none;
+  border-top: 1px solid #1890ff;
+  border-radius: 0;
+  border-width: 2px;
 }

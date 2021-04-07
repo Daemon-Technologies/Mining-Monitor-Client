@@ -38,7 +38,7 @@ const renderCardContent = (props) => {
           }}
           className="flex flex-column"
         >
-          <span className="text-sm text-grey">{extraLabel}</span>
+          <span className="text-sm text-grey text-w-500">{extraLabel}</span>
           <span className="text-bold text-black text-lg">
             {thousands(extraValue)}
           </span>
@@ -52,7 +52,7 @@ const renderCuCardContent = (props) => {
   const { title, titleInfo, diagram, extraLabel, extraValue } = props;
   return (
     <div>
-      <div className="flex text-grey text-sm">
+      <div className="flex text-grey text-sm text-w-400">
         <div>{title}</div>
         <div className="margin-left-sm">{titleInfo}</div>
       </div>
@@ -67,7 +67,7 @@ const renderCuCardContent = (props) => {
           }}
           className="flex flex-column"
         >
-          <span className="text-sm text-grey">{extraLabel}</span>
+          <span className="text-sm text-grey text-w-500">{extraLabel}</span>
           <span className="text-bold text-black text-lg">
             {thousands(extraValue)}
           </span>

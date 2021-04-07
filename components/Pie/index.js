@@ -11,8 +11,12 @@ const DemoPie = ({data}) => {
     data: datasource,
     appendPadding: 10,
     angleField: 'number',
-    radius: 1,
-    innerRadius: 0.64,
+    radius: 0.8,
+    innerRadius: 0.54,
+    legend:{
+      layout:"vertical",
+      position: "right",
+    },
     colorField: "address",
     label: {
       type: "inner",

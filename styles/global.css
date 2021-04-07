@@ -183,3 +183,6 @@
 .ant-statistic-content-value {
   text-decoration: underline;
 }
+.notice-tooltip{
+  text-align: justify;
+}

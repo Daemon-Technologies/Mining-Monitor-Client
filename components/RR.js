@@ -18,7 +18,7 @@ const RR = ({ data }) => {
         break;
     }
   };
-  const notice = <div className="flex flex-column"><span>notice title</span><span>notice content</span></div>;
+  const notice = <div className="notice-tooltip">You can start editing the page by modifying pages/index.js. The page auto-updates as you edit the file.</div>;
   return (
     <Card
       bordered={false}

@@ -18,24 +18,26 @@ const RR = ({ data }) => {
         break;
     }
   };
+
   const notice = 
-    <div className=" flex flex-column" >
-        <div>
+    <div className=" flex flex-column notice-tooltip" >
+        <span>
           The Rate of Return is computed as follow: 
-        </div>
-        <div>
-          RR = Total_Earn / Total_Cost - 1
-        </div>
-        <div>
-          Total_Earn = Block_Won * STX_Reward_Per_Block
-        </div>
-        <div>
-          Total_Cost = Total_Burnt + Total_BTC_Gas
-        </div>
-        <div>
-          Total_BTC_Gas = Commit_TX_Bytes(350) * Avg_Sats_Per_Byte(150) * Block_Mined
-        </div>
+        </span>
+        <span>
+          - Rate_of_Return = Total_Earn / Total_Cost - 1
+        </span>
+        <span>
+          - Total_Earn = Block_Won * STX_Reward_Per_Block
+        </span>
+        <span>
+          - Total_Cost = Total_Burnt + Total_BTC_Gas
+        </span>
+        <span>
+          - Total_BTC_Gas = Commit_TX_Bytes(350) * Avg_Sats_Per_Byte(150) * Block_Mined
+        </span>
     </div>;
+
   return (
     <Card
       bordered={false}

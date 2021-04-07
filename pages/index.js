@@ -5,7 +5,6 @@ import Dashboard from "../components/Dashboard";
 import { getDashboardData } from "../utils";
 
 const Home = (props) => {
-  console.log(props.data);
   return (
     <div>
       <Head>

@@ -51,7 +51,7 @@ const minerTable = ({ data }) => {
       bodyStyle={{ padding: "20px 24px 8px 24px" }}
       style={{ height: 600 }}
       hoverable
-      title={<div className="text-title">Burn Fee Table</div>}
+      title={"Burn Fee Table"}
     >
       <Row style={{ marginBottom: 10 }}>
         <Col sm={24} xs={24} style={{ marginBottom: 10, height: 200 }}>

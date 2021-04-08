@@ -2,13 +2,18 @@ import React, { useState, useEffect } from "react";
 import TinyLine from "@ant-design/charts/lib/tinyLine";
 
 const CuTinyLine = ({ data }) => {
-  console.log(data);
+  //console.log(data);
   var config = {
     height: 60,
     width: 300,
     autoFit: true,
     data,
     smooth: true,
+    lineStyle: {
+      fill: "#fff",
+      stroke: "#007AFF",
+      lineWidth: 3,
+    },
     tooltip: {
       showTitle: true,
       showContent: true,

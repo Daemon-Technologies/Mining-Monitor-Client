@@ -2,6 +2,7 @@ import { Col, Row, Card } from "antd";
 import { Statistic } from "antd";
 import MiniArea from "./MiniArea";
 import CuTinyLine from "./CuTinyLine";
+import CuLine from "./CuLine";
 import { thousands } from "../utils/index.js";
 
 const topColResponsiveProps = {
@@ -107,7 +108,7 @@ const currentStatusRow = ({ data }) => {
           {renderCuCardContent({
             title: "Average Spent per Block:",
             titleInfo: thousands(data.current_burn_fee.avg) + " Sats",
-            diagram: <CuTinyLine data={data.current_burn_fee.data_20} />,
+            diagram: <CuLine data={data.current_burn_fee.data_20} />,
             extraLabel: "Total Spent by Miners",
             extraValue: thousands(data.current_burn_fee.data_20[19]) + " Sats",
           })}

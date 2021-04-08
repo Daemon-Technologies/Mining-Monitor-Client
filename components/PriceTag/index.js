@@ -4,7 +4,7 @@ const PriceTag = ({ price }) => {
   const formatValue = (value) => thousands(parseFloat(value).toFixed(4));
   const formatValueFix2 = (value) => thousands(parseFloat(value).toFixed(2));
   return (
-    <div className="flex align-center price-tag text-white">
+    <div className="flex align-center price-tag text-black">
       <div className="flex align-center">
         <svg viewBox="0 0 22 22" className="price-stx">
           <path

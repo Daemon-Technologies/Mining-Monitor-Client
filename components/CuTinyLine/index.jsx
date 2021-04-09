@@ -23,7 +23,6 @@ const CuTinyLine = ({ data }) => {
         let value = "";
         if (data.length) {
           value = data[0].value;
-          console.log(value);
         }
         return `<div class='tooltip-container'>${value}</div>`;
       },

@@ -108,7 +108,7 @@ const currentStatusRow = ({ data }) => {
           {renderCuCardContent({
             title: "Average Spent per Block:",
             titleInfo: thousands(data.current_burn_fee.avg) + " Sats",
-            diagram: <CuLine data={data.current_burn_fee.data_20} latestBlock={data.current_block.stacks_block_height}/>,
+            diagram: <CuLine data={data.current_burn_fee.data_20} latestBlock={data.current_block.stacks_block_height} value={"spent"}/>,
             extraLabel: "Total Spent by Miners",
             extraValue: thousands(data.current_burn_fee.data_20[19]) + " Sats",
           })}
@@ -124,7 +124,7 @@ const currentStatusRow = ({ data }) => {
           {renderCuCardContent({
             title: "Average Miner Amount:",
             titleInfo: data.current_miner.avg,
-            diagram: <CuLine data={data.current_miner.data_20} latestBlock={data.current_block.stacks_block_height}/>,
+            diagram: <CuLine data={data.current_miner.data_20} latestBlock={data.current_block.stacks_block_height} value={"miners"}/>,
             extraLabel: "Participating Miners",
             extraValue: data.current_miner.data_20[19],
           })}

@@ -2,7 +2,7 @@ import React from "react";
 import Line from "@ant-design/charts/lib/line";
 import { thousands } from "../../utils/index.js";
 
-const CuLine = ({ data, latestBlock }) => {
+const CuLine = ({ data, latestBlock, value }) => {
   const formatData = data.map((item, index) => {
     return { height: latestBlock - 19 + index, value: item };
   });
@@ -48,10 +48,14 @@ const CuLine = ({ data, latestBlock }) => {
         items.forEach(function (item) {
           htmlStr += '<div class="g2-tooltip-item" style="margin-bottom:8px;display:flex;">\n'
             .concat(
-              '<span class="g2-tooltip-item-value">' +
+              value === "spent" 
+              ? '<span class="g2-tooltip-item-value">' +
                 "Total Spent: " +
+                thousands(item.value) + " Sats"+
+                "</span>\n"
+              : '<span class="g2-tooltip-item-value">' +
+                "Participating Miners: " +
                 thousands(item.value) +
-                " Sats" +
                 "</span>\n"
             )
             .concat("</div>");

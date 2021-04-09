@@ -45,18 +45,6 @@ export default function DashBoard({ dashboardData }) {
               style={{ cursor: "pointer" }}
               onClick={reload}
             />
-            <p
-              className="text-white site-text"
-              style={{
-                lineHeight: "32px",
-                marginLeft: "1.5rem",
-                marginBottom: "0",
-                cursor: "pointer",
-              }}
-              onClick={reload}
-            >
-              stxmining.club{" "}
-            </p>
           </div>
           <PriceTag price={data.price} />
         </div>

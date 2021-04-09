@@ -135,12 +135,12 @@
 
 
 .price-stx {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   margin-right: 4px;
   background-color: #000;
   padding: 4px;
-  border-radius: 22px;
+  border-radius: 20px;
   display: block;
   fill: none;
   color: #fff;
@@ -157,12 +157,12 @@
 }
 
 .btc-icon {
-  width: 22px;
-  height: 22px;
+  width: 20px;
+  height: 20px;
   margin-right: 4px;
   background-color: #d88852;
   padding: 4px;
-  border-radius: 22px;
+  border-radius: 20px;
 }
 
 @font-face {

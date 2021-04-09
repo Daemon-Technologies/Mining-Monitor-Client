@@ -18,6 +18,11 @@ export default function DashBoard({ dashboardData }) {
   if (!data) {
     return "loading...";
   }
+
+  function reload() {
+    location.reload();
+  }
+
   return (
     <Layout>
       <Header
@@ -34,14 +39,21 @@ export default function DashBoard({ dashboardData }) {
           style={{ width: "100%" }}
         >
           <div className="flex align-center">
-            <img src="/images/logo.svg" className="logo_image" />
+            <img
+              src="/images/logo.svg"
+              className="logo_image"
+              style={{ cursor: "pointer" }}
+              onClick={reload}
+            />
             <p
               className="text-white site-text"
               style={{
                 lineHeight: "32px",
                 marginLeft: "1.5rem",
                 marginBottom: "0",
+                cursor: "pointer",
               }}
+              onClick={reload}
             >
               stxmining.club{" "}
             </p>

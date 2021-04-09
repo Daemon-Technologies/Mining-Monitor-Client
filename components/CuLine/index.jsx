@@ -1,6 +1,6 @@
 import React from "react";
 import Line from "@ant-design/charts/lib/line";
-import { thousands } from '../../utils/index.js'
+import { thousands } from "../../utils/index.js";
 
 const CuLine = ({ data, latestBlock }) => {
   const formatData = data.map((item, index) => {
@@ -14,6 +14,7 @@ const CuLine = ({ data, latestBlock }) => {
     yField: "value",
     xAxis: false,
     nice: true,
+    appendPadding: [5, 0, 0, 0],
     //  {
     //   label: null,
     //   grid: null,
@@ -30,9 +31,9 @@ const CuLine = ({ data, latestBlock }) => {
       stroke: "#007AFF",
       lineWidth: 3,
     },
-    tooltip:{
+    tooltip: {
       showTitle: true,
-      
+
       customContent: function customContent(title, items) {
         var _field$data;
         var field = items === null || items === void 0 ? void 0 : items[0];
@@ -42,18 +43,23 @@ const CuLine = ({ data, latestBlock }) => {
             : (_field$data = field.data) === null || _field$data === void 0
             ? void 0
             : "Block Height:" + thousands(_field$data.height),
-          '</div><div class="g2-tooltip-items">',
+          '</div><div class="g2-tooltip-items">'
         );
         items.forEach(function (item) {
           htmlStr += '<div class="g2-tooltip-item" style="margin-bottom:8px;display:flex;">\n'
-            .concat('<span class="g2-tooltip-item-value">' + "Total Spent: "+ thousands(item.value) + " Sats"+ '</span>\n')
-            .concat('</div>');
+            .concat(
+              '<span class="g2-tooltip-item-value">' +
+                "Total Spent: " +
+                thousands(item.value) +
+                " Sats" +
+                "</span>\n"
+            )
+            .concat("</div>");
         });
-        htmlStr += '</div>';
+        htmlStr += "</div>";
         //console.log(htmlStr)
         return htmlStr;
       },
-      
     },
   };
 

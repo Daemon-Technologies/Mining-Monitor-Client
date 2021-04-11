@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "Open Sauce";
+  src: url("/fonts/OpenSauceOne-Medium.ttf") format("truetype");
+}
+
+body {
+  font-family: "Open Sauce", system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
 .header-bg {
   background-color: #243448;
   height: 22rem;
@@ -51,7 +60,7 @@
   background-color: #111827;
 }
 
-.bg-orange{
+.bg-orange {
   background-color: #d88852;
 }
 
@@ -133,7 +142,6 @@
   padding: 0 1rem;
 }
 
-
 .price-stx {
   width: 20px;
   height: 20px;
@@ -163,11 +171,6 @@
   background-color: #d88852;
   padding: 4px;
   border-radius: 20px;
-}
-
-@font-face {
-  font-family: "Open Sauce";
-  src: url("/fonts/OpenSauceOne-Medium.ttf") format("truetype");
 }
 
 .site-text {

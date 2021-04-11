@@ -49,11 +49,11 @@ const minerTable = ({ data }) => {
     <Card
       bordered={false}
       bodyStyle={{ padding: "20px 24px 8px 24px" }}
-      style={{ height: 600 }}
+      style={{ height: 620 }}
       hoverable
       title={"Burn Fee Table"}
     >
-      <Row style={{ marginBottom: 10 }}>
+      <Row style={{ marginBottom: 25 }}>
         <Col sm={24} xs={24} style={{ marginBottom: 10, height: 200 }}>
           <CuScatter data={data.minersBurnFee20} />
         </Col>
@@ -69,6 +69,7 @@ const minerTable = ({ data }) => {
         }}
         rowClassName="table-row"
         rowKey={(item) => item.stacks_block_height}
+        style={{marginTop: "10px"}}
       />
     </Card>
   );

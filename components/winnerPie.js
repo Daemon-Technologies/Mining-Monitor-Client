@@ -22,7 +22,7 @@ const winnerPie = ({data}) => {
     return (
         <Card 
             bordered={false}  
-            style={{height: 600}}
+            style={{height: 620}}
             bodyStyle={{ padding: '20px 24px 8px 24px' }} 
             hoverable
             title = {"Blocks Won Per Miner"}

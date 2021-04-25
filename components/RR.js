@@ -1,7 +1,7 @@
 import { Card, Radio, Tooltip } from "antd";
 import MultiColoum from "./MultiColoum";
 import { useState } from "react";
-const RR = ({ data }) => {
+const RR = ({ data, gas }) => {
   const [queryType, setQueryType] = useState("r100");
   const [dataSource, setDataSource] = useState(data.r100);
   const handleChangeQuery = (e) => {
@@ -34,7 +34,7 @@ const RR = ({ data }) => {
           - Total_Cost = Total_Commit + Total_BTC_Gas
         </span>
         <span>
-          - Total_BTC_Gas = Commit_TX_Bytes(350) * Avg_Sats_Per_Byte(150) * Block_Mined
+          - Total_BTC_Gas = Commit_TX_Bytes(350) * Avg_Sats_Per_Byte({gas}) * Block_Mined
         </span>
     </div>;
 

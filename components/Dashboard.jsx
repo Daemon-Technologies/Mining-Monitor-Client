@@ -82,7 +82,7 @@ export default function DashBoard({ dashboardData }) {
               <BurnFeeArea data={data.burnFeeArea} />
             </Col>
             <Col xl={11} lg={24} md={24} sm={24} xs={24}>
-              <RR data={data.winnerPie} />
+              <RR data={data.winnerPie} gas={data.price.btc_gas} />
             </Col>
           </Row>
         </div>

@@ -58,7 +58,7 @@ export default function DashBoard({ dashboardData }) {
           className="site-layout-background"
           style={{ padding: 24, minHeight: 380 }}
         >
-          <CurrentStatusRow data={data.currentStatus} />
+          <CurrentStatusRow data={data.currentStatus} btc={{btc_total: data.btc_total, btc_hash_power: data.btc_hash_power}}/>
           <Row
             gutter={24}
             style={{

@@ -178,8 +178,8 @@ const currentStatusRow = ({ data, btc }) => {
           {renderNewCardContent({
             title: "BTC Hashrate:",
             titleInfo: btc.btc_hash_power + " EH/s",
-            extraLabel: "Active STX Miners",
-            extraValue: data.current_miner.data_20[19],
+            extraLabel: "Latest 20 Blocks Average STX Miners",
+            extraValue: data.avg,
           })}
         </Card>
       </Col>

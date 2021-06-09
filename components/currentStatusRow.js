@@ -92,7 +92,7 @@ const renderNewCardContent = (props) => {
         >
           <span className="text-sm text-grey text-w-500">{extraLabel}</span>
           <span className="text-bold text-black text-lg">
-            {thousands(extraValue)}
+          {thousands(extraValue)}
           </span>
         </div>
       </div>
@@ -178,8 +178,8 @@ const currentStatusRow = ({ data, btc }) => {
           {renderNewCardContent({
             title: "BTC Hashrate:",
             titleInfo: btc.btc_hash_power + " EH/s",
-            extraLabel: "Latest 20 Blocks Average STX Miners",
-            extraValue: data.avg,
+            extraLabel: "Average STX Miners",
+            extraValue: data.current_miner.avg,
           })}
         </Card>
       </Col>

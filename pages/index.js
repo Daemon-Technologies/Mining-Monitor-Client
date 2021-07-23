@@ -4,6 +4,8 @@ import Dashboard from "../components/Dashboard";
 
 import { getDashboardData } from "../utils";
 
+const upgrading = true
+
 const Home = (props) => {
   return (
     <div>
@@ -11,7 +13,10 @@ const Home = (props) => {
         <title>STX Mining Monitor</title>
         <link rel="shortcut icon" href="/images/favicon.png" />
       </Head>
-      <Dashboard dashboardData={props.data} />
+      {upgrading? <div>Upgrading By Daemon Now</div> :
+                  <Dashboard dashboardData={props.data} />
+      }
+          
     </div>
   );
 };
